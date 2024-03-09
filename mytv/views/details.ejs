@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MyTV</title>
+    <!-- local css file in public directory -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+    <main>
+        <h1> <%= data.showname %> </h1>
+        <img src="<%= data.imgpath %>" width="210px">
+        <h4>Description</h4>
+        <p><%= data.descript %></p>
+        
+        <h5>Actors</h5>
+        <% actors.forEach((person) => { %>
+                <p><%= person %></p>
+        <% }); %>
+        
+        <p>posted by: <%= data.user_id %></p>
+  
+
+
+</main>
+</body>
+</html>
